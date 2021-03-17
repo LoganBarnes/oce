@@ -19,6 +19,10 @@
 
 project(OCE)
 
+cmake_policy(SET CMP0077 NEW)
+
+set(OpenGL_GL_PREFERENCE GLVND)
+
 set(OCE_VERSION_MAJOR 0)
 set(OCE_VERSION_MINOR 18)
 # OCE_VERSION_PATCH is used for bugfixes releases only
@@ -34,7 +38,7 @@ set(OCE_ABI_SOVERSION 11)
 set(OCE_ABI_VERSION ${OCE_ABI_SOVERSION}.0.0)
 
 # Set the minimum version of cmake required to 2.6
-cmake_minimum_required( VERSION 2.6 )
+cmake_minimum_required( VERSION 2.8.12 )
 
 # Policy CMP0043 introduced in cmake version 3.0 IGNORES the use of COMPILE_DEFINITIONS suffixed variables, e.g. COMPILE_DEFINITIONS_DEBUG
 # Set to OLD behavior until minimum cmake version >= 2.8.10 (version that COMPILE_DEFINITIONS can be set by generator expressions instead)
