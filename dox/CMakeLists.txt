@@ -1,7 +1,7 @@
 project (Overview)
 
 # directory that contains all raw OCCT overview articles (markdown format)
-set (OCCT_OVERVIEW_DIR "${CMAKE_SOURCE_DIR}/dox")
+set (OCCT_OVERVIEW_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
 # directory that contains resources for the generation of OCCT documentation
 set (OCCT_OVERVIEW_RESOURCE_DIR "${OCCT_OVERVIEW_DIR}/resources")
